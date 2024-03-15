@@ -1,0 +1,7 @@
+version: "3.9"
+services:
+  buildApp:
+    image: gsp26/my-ubuntu:latest
+    volumes:
+      - ./:/bld
+    command: sh -c "cd bld && mkdir -p build && cd  build && cmake .. && make -j 5"
